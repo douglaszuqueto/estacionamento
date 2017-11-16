@@ -5,6 +5,7 @@ volumes:
     external: true
 
 services:
+
   # RethinkDB
   db:
     image: rethinkdb:2.3.6
@@ -15,6 +16,15 @@ services:
       - "8080:8080"
       - "29015:29015"
       - "28015:28015"
+
+  # SDK
+  api:
+    image: ambientum/node
+    container_name: estacionamento-sdk
+    volumes:
+      - ./sdk:/www
+    working_dir: /www
+    command: ["yarn", "build"]
 
   # API
   api:
@@ -28,7 +38,8 @@ services:
       - db
     depends_on:
       - db
-    command: ["node", "/www/api/build/main"]
+    working_dir: /www/api
+    command: ["yarn", "start"]
 
   # IO
   io:
@@ -42,7 +53,8 @@ services:
       - db
     depends_on:
       - db
-    command: ["node", "/www/io/build/main"]
+    working_dir: /www/io
+    command: ["yarn", "start"]
 
   # SUBSCRIBER
   subscriber:
@@ -55,7 +67,8 @@ services:
       - db
     depends_on:
       - db
-    command: ["node", "/www/subscriber/build/main"]
+    working_dir: /www/subscriber
+    command: ["yarn", "start"]
 
   # FRONT
   front:
