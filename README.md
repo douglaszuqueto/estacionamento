@@ -1,4 +1,4 @@
-## Estacionamento Realtime
+## Estacionamento Realtime - Arquitetura Modular
 
 Projeto de estudo com finalidade de validar tecnologias que proporcionam conexão de tempo real de ponta a ponta.
 
