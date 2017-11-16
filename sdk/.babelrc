@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "backpack-core/babel",
+    "stage-0"
+  ],
+  "plugins": [
+    ["transform-flow-strip-types"],
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "instreets": "./src",
+          "config": "./src/config"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "estacionamento-realtime",
+  "version": "1.0.0",
+  "author": "Douglas Zuqueto <douglas.zuqueto@gmail.com> (https://douglaszuqueto.com)",
+  "description": "Estacionamento realtime utilizando NodeJS, Socket.IO e RethinkDB",
+  "main": "index.js",
+  "keywords": [
+    "nodejs",
+    "socket.io",
+    "rethinkdb",
+    "realtime"
+  ],
+  "scripts": {
+    "start": "backpack build && node ./build/main.js",
+    "lint": "eslint ./src/** --color",
+    "dev": "backpack",
+    "build": "backpack build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "rethinkdb": "^2.3.3",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "backpack-core": "^0.4.2"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^2.7.1",
+    "eslint": "^4.4.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

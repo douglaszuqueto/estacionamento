@@ -1,0 +1,110 @@
+[
+  {
+    "id": "86d8d683-9c70-45a7-8a44-273ebe55a51b",
+    "number": 7,
+    "position": {
+      "x": 165,
+      "y": 205
+    },
+    "state": false
+  },
+  {
+    "id": "7ccd6c67-f890-449b-8117-6dc9af7a93e5",
+    "number": 3,
+    "position": {
+      "x": 165,
+      "y": 78
+    },
+    "state": false
+  },
+  {
+    "id": "33aa5e88-fa5d-4fd3-af92-5ae2a182ad91",
+    "number": 8,
+    "position": {
+      "x": 165,
+      "y": 235
+    },
+    "state": true
+  },
+  {
+    "id": "87905af8-0f55-4fdb-87a1-418ba3917c38",
+    "number": 12,
+    "position": {
+      "x": 190,
+      "y": 492
+    },
+    "state": false
+  },
+  {
+    "id": "30baf0f1-a9f3-4c3c-b183-db308c75569c",
+    "number": 5,
+    "position": {
+      "x": 165,
+      "y": 140
+    },
+    "state": false
+  },
+  {
+    "id": "66ac94b3-109f-4f01-b8fb-489b943e2353",
+    "number": 2,
+    "position": {
+      "x": 165,
+      "y": 50
+    },
+    "state": true
+  },
+  {
+    "id": "9473ab04-506c-4661-9214-e69285d14931",
+    "number": 1,
+    "position": {
+      "x": 165,
+      "y": 15
+    },
+    "state": false
+  },
+  {
+    "id": "bfc4dbd0-aa79-4a11-beef-c3a4aa5b6909",
+    "number": 6,
+    "position": {
+      "x": 165,
+      "y": 175
+    },
+    "state": false
+  },
+  {
+    "id": "6c00417d-9be0-4454-834c-11628400f192",
+    "number": 10,
+    "position": {
+      "x": 190,
+      "y": 431
+    },
+    "state": false
+  },
+  {
+    "id": "8da5240d-ad8d-4ed6-947d-a925edc8d6a2",
+    "number": 11,
+    "position": {
+      "x": 190,
+      "y": 462
+    },
+    "state": false
+  },
+  {
+    "id": "3bef7444-3039-4a10-85bf-197c886dc26f",
+    "number": 9,
+    "position": {
+      "x": 165,
+      "y": 265
+    },
+    "state": true
+  },
+  {
+    "id": "901e7c33-e076-4a13-b6c7-da3655aa8ebc",
+    "number": 4,
+    "position": {
+      "x": 165,
+      "y": 110
+    },
+    "state": true
+  }
+]

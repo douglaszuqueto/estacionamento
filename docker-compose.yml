@@ -1,0 +1,69 @@
+version: "3"
+
+volumes:
+  rethindb-data:
+    external: true
+
+services:
+  # RethinkDB
+  db:
+    image: rethinkdb:2.3.6
+    container_name: estacionamento-db
+    volumes:
+      - rethindb-data:/data/rethinkdb_data
+    ports:
+      - "8080:8080"
+      - "29015:29015"
+      - "28015:28015"
+
+  # API
+  api:
+    image: ambientum/node
+    container_name: estacionamento-api
+    volumes:
+      - ./:/www
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    depends_on:
+      - db
+    command: ["node", "/www/api/build/main"]
+
+  # IO
+  io:
+    image: ambientum/node
+    container_name: estacionamento-io
+    volumes:
+          - ./:/www
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    depends_on:
+      - db
+    command: ["node", "/www/io/build/main"]
+
+  # SUBSCRIBER
+  subscriber:
+    image: ambientum/node
+    container_name: estacionamento-subscriber
+    volumes:
+          - ./:/www
+    links:
+      - io
+      - db
+    depends_on:
+      - db
+    command: ["node", "/www/subscriber/build/main"]
+
+  # FRONT
+  front:
+    image: nginx:alpine
+    container_name: estacionamento-front
+    volumes:
+          - ./front:/usr/share/nginx/html:ro
+    ports:
+      - "8888:80"
+
+

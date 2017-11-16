@@ -1,0 +1,16 @@
+body {
+  margin-top: 25px !important;
+}
+
+img {
+  position: relative;
+}
+
+.text {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99999;
+  border-radius: 100%;
+}
