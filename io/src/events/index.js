@@ -1,4 +1,4 @@
-import { Vagas as vagas } from '../../../sdk/build/main'
+import { Vagas as vagas } from 'sdk/build/main'
 
 export default (io) => {
   io.on('connection', (socket) => {

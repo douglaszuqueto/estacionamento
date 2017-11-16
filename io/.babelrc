@@ -7,12 +7,12 @@
     ["transform-flow-strip-types"],
     [
       "module-resolver", {
-        "root": ["./src"],
-        "alias": {
-          "instreets": "./src",
-          "config": "./src/config"
-        }
+      "root": ["./src"],
+      "alias": {
+        "instreets": "./src",
+        "sdk": "../../sdk"
       }
+    }
     ]
   ]
 }

@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
 /* MODEL */
-import { Vagas } from '../../../../sdk/build/main'
+import { Vagas } from 'sdk/build/main'
 
 /* ROUTES */
 const router = Router()
