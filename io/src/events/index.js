@@ -10,8 +10,7 @@ export default (io) => {
 }
 
 const onDisconnect = (socket) => console.log('User is disconnected...', socket)
-const onUpdateVaga = async (payload) => {
-  const {id} = payload
+const onUpdateVaga = async ({id}) => {
   console.log(id)
 
   try {
