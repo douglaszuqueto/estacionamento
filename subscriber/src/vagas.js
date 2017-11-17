@@ -1,4 +1,4 @@
-import { Vagas } from 'sdk/build/main'
+import { Vagas } from 'sdk'
 
 export default (io) => {
   Vagas.changes()

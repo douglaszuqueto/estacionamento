@@ -99,8 +99,8 @@ module.exports = require("socket.io");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_io_node_modules_babel_runtime_regenerator__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_io_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_io_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__www_io_node_modules_babel_runtime_regenerator__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__www_io_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__www_io_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sdk_build_main__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sdk_build_main___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__sdk_build_main__);
 
@@ -126,42 +126,41 @@ var onDisconnect = function onDisconnect(socket) {
   return console.log('User is disconnected...', socket);
 };
 var onUpdateVaga = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_io_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(payload) {
-    var id, vaga, state;
-    return __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_io_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__www_io_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref2) {
+    var id = _ref2.id;
+    var vaga, state;
+    return __WEBPACK_IMPORTED_MODULE_0__www_io_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            id = payload.id;
-
             console.log(id);
 
-            _context.prev = 2;
-            _context.next = 5;
+            _context.prev = 1;
+            _context.next = 4;
             return __WEBPACK_IMPORTED_MODULE_1__sdk_build_main__["Vagas"].find(id);
 
-          case 5:
+          case 4:
             vaga = _context.sent;
             state = !vaga.state;
-            _context.next = 9;
+            _context.next = 8;
             return __WEBPACK_IMPORTED_MODULE_1__sdk_build_main__["Vagas"].update(id, { state: state });
 
-          case 9:
-            _context.next = 14;
+          case 8:
+            _context.next = 13;
             break;
 
-          case 11:
-            _context.prev = 11;
-            _context.t0 = _context['catch'](2);
+          case 10:
+            _context.prev = 10;
+            _context.t0 = _context['catch'](1);
 
             console.error(_context.t0.message);
 
-          case 14:
+          case 13:
           case 'end':
             return _context.stop();
         }
       }
-    }, _callee, _this, [[2, 11]]);
+    }, _callee, _this, [[1, 10]]);
   }));
 
   return function onUpdateVaga(_x) {

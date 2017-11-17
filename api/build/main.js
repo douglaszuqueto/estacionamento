@@ -99,7 +99,7 @@ __WEBPACK_IMPORTED_MODULE_0__http_index__["a" /* default */].listen(3000, functi
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_express__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_express__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__middlewares__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes_index__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes__ = __webpack_require__(7);
 
 
 
@@ -110,7 +110,7 @@ var app = __WEBPACK_IMPORTED_MODULE_0_express___default()();
 Object(__WEBPACK_IMPORTED_MODULE_1__middlewares__["a" /* default */])(app);
 
 /* ROUTES */
-app.use('/', __WEBPACK_IMPORTED_MODULE_2__routes_index__["a" /* default */]);
+app.use('/', __WEBPACK_IMPORTED_MODULE_2__routes__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (app);
 
@@ -149,8 +149,8 @@ module.exports = require("cors");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_express__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_express__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sdk_build_main__ = __webpack_require__(10);
@@ -170,9 +170,9 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 var router = Object(__WEBPACK_IMPORTED_MODULE_1_express__["Router"])();
 
 router.get('/vagas', function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res) {
     var vagas;
-    return __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    return __WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -207,9 +207,9 @@ router.get('/vagas', function () {
 }());
 
 router.post('/vagas/:id', function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res) {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res) {
     var id, vaga, state, vagas;
-    return __WEBPACK_IMPORTED_MODULE_0__home_dzuqueto_github_com_estacionamento_api_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+    return __WEBPACK_IMPORTED_MODULE_0__www_api_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:

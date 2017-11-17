@@ -10,7 +10,7 @@
         "root": ["./src"],
         "alias": {
           "instreets": "./src",
-          "sdk": "../../sdk"
+          "sdk": "../sdk/build/main"
         }
       }
     ]
