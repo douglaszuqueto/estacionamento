@@ -11,13 +11,5 @@ export default (io) => {
 
 const onDisconnect = (socket) => console.log('User is disconnected...', socket)
 const onUpdateVaga = async ({id}) => {
-  console.log(id)
-
-  try {
-    const vaga = await vagas.find(id)
-    const state = !vaga.state
-    await vagas.update(id, {state})
-  } catch (exception) {
-    console.error(exception.message)
-  }
+  await vagas.changeState(id)
 }

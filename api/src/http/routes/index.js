@@ -17,11 +17,8 @@ router.get('/vagas', async (req, res) => {
 
 router.post('/vagas/:id', async (req, res) => {
   try {
-    const id = req.params.id
-
-    const vaga = await Vagas.find(id)
-    const state = !vaga.state
-    const vagas = await Vagas.update(id, {state})
+    const {id} = req.params
+    const vagas = await Vagas.changeState(id)
     res.json(vagas)
   } catch (exception) {
     res.json(exception.message)
