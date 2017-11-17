@@ -35,7 +35,7 @@ const makeVagas = (vagas) => {
   for (let vaga in vagas) {
     const el = vagas[vaga];
     makeVaga(el);
-    makePossition(el);
+    makePosition(el);
   }
 };
 
@@ -53,7 +53,7 @@ const makeVaga = (vaga) => {
   body.append('<span title="Vaga ' + vaga.number + '" id="vaga_' + vaga.number + '" data-id="' + vaga.id + '" data-name="Vaga ' + vaga.number + '" class="hidden"></span>');
 };
 
-const makePossition = (vaga) => {
+const makePosition = (vaga) => {
   const $vaga = $('#vaga_' + vaga.number);
 
   const color = vaga.state ? 'red' : '#449d44';
