@@ -30,6 +30,9 @@ services:
   api:
     image: ambientum/node
     container_name: estacionamento-api
+    environment:
+      - APP_PORT=3000
+      - DB_HOST=db
     volumes:
       - ./:/www
     ports:
@@ -46,8 +49,11 @@ services:
   io:
     image: ambientum/node
     container_name: estacionamento-io
+    environment:
+      - DB_HOST=db
+      - IO_PORT=8000
     volumes:
-          - ./:/www
+      - ./:/www
     ports:
       - "8000:8000"
     links:
@@ -62,8 +68,12 @@ services:
   subscriber:
     image: ambientum/node
     container_name: estacionamento-subscriber
+    environment:
+      - DB_HOST=db
+      - IO_HOST=io
+      - IO_PORT=8000
     volumes:
-          - ./:/www
+      - ./:/www
     links:
       - io
       - db

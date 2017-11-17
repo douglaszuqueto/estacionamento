@@ -1,8 +1,6 @@
 import socketIOClient from 'socket.io-client'
-import vagas from './vagas'
+import Vagas from './vagas'
 
-const host = 'http://io:8000'
+const io = socketIOClient(`http://${process.env.IO_HOST}:${process.env.IO_PORT}`)
 
-const io = socketIOClient(host)
-
-vagas(io)
+Vagas(io)
