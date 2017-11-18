@@ -1,9 +1,10 @@
 {
   "name": "estacionamento-realtime-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Estacionamento realtime utilizando NodeJS, Socket.IO e RethinkDB",
   "main": "./src/index.js",
   "author": "Douglas Zuqueto <douglas.zuqueto@gmail.com> (https://douglaszuqueto.com)",
+  "repository": "https://github.com/douglaszuqueto/estacionamento/tree/master/sdk",
   "license": "MIT",
   "scripts": {
     "start": "backpack build && node ./build/main.js",
