@@ -1,5 +1,5 @@
 {
-  "name": "estacionamento-realtime",
+  "name": "estacionamento-realtime-sdk",
   "version": "1.0.0",
   "description": "Estacionamento realtime utilizando NodeJS, Socket.IO e RethinkDB",
   "main": "./src/index.js",
