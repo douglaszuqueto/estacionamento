@@ -8,9 +8,8 @@ export default async (io) => {
       if (err) {
         throw new Error(err)
       }
-      const {new_val} = row
-      io.emit('subscriber.vagas.change', new_val)
-      console.info(new_val)
+      io.emit('subscriber.vagas.change', row)
+      console.info(row)
     })
   } catch (exception) {
     console.error(exception.message())
