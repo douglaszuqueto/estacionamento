@@ -28,8 +28,18 @@ export class Model {
       .then((conn) => r.table(this.table).changes().run(conn))
   }
 
+  create (payload) {
+    return getConn()
+      .then((conn) => r.table(this.table).insert(payload).run(conn))
+  }
+
   update (id, payload) {
     return getConn()
       .then((conn) => r.table(this.table).get(id).update(payload).run(conn))
+  }
+
+  remove (id) {
+    return getConn()
+      .then((conn) => r.table(this.table).get(id).delete().run(conn))
   }
 }
