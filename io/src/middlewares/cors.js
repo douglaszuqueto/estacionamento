@@ -1,12 +1,16 @@
 export default (io) => {
-  io.origins(cors)
+  io.use(cors)
 }
 
-const cors = (origin, callback) => {
-  console.log(`Origin: ${origin}`)
+const cors = (socket, next) => {
+  const {headers} = socket.request
+  const {query} = socket.handshake
 
-  if (origin !== 'http://127.0.0.1:8888') {
-    return callback(new Error('origin not allowed'), false)
-  }
-  return callback(null, true)
+  console.log(`Origin:`, headers)
+  console.log(`Query:`, query)
+
+  // if (headers.origin !== 'http://127.0.0.1:8888') {
+  //   return next(new Error('origin not allowed'), false)
+  // }
+  return next()
 }
