@@ -6,7 +6,7 @@ const token = (socket, next) => {
   const {headers} = socket.request
   const {query} = socket.handshake
 
-  console.log(`Origin:`, headers)
+  console.log(`Headers:`, headers)
   console.log(`Query:`, query)
 
   // if (query !== 'bla') {
