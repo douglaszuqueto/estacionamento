@@ -1,6 +1,6 @@
 import express from 'express'
 import middlewares from './middlewares'
-import router from './routes'
+import routes from './routes'
 
 const app = express()
 
@@ -8,6 +8,6 @@ const app = express()
 middlewares(app)
 
 /* ROUTES */
-app.use('/', router)
+routes(app)
 
 export default app
