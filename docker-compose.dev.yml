@@ -1,0 +1,95 @@
+version: "3"
+
+volumes:
+  rethindb-data:
+    external: true
+
+services:
+
+  # RethinkDB
+  db:
+    image: rethinkdb:2.3.6
+    container_name: estacionamento-dev-db
+    volumes:
+      - rethindb-data:/data/rethinkdb_data
+    ports:
+      - "8080:8080"
+      - "29015:29015"
+      - "28015:28015"
+
+  # SDK
+  sdk:
+    image: ambientum/node
+    container_name: estacionamento-dev-sdk
+    volumes:
+      - ./sdk:/www
+    working_dir: /www
+    command: ["yarn", "dev"]
+
+  # API
+  api:
+    image: ambientum/node
+    container_name: estacionamento-dev-api
+    environment:
+      - APP_PORT=3000
+      - DB_HOST=db
+    volumes:
+      - ./:/www
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    depends_on:
+      - sdk
+      - db
+    working_dir: /www/api
+    command: ["yarn", "dev"]
+
+  # IO
+  io:
+    image: ambientum/node
+    container_name: estacionamento-dev-io
+    environment:
+      - DB_HOST=db
+      - IO_PORT=8000
+    volumes:
+      - ./:/www
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    depends_on:
+      - sdk
+      - db
+    working_dir: /www/io
+    command: ["yarn", "dev"]
+
+  # SUBSCRIBER
+  subscriber:
+    image: ambientum/node
+    container_name: estacionamento-dev-subscriber
+    environment:
+      - DB_HOST=db
+      - IO_HOST=io
+      - IO_PORT=8000
+    volumes:
+      - ./:/www
+    links:
+      - io
+      - db
+    depends_on:
+      - sdk
+      - db
+    working_dir: /www/subscriber
+    command: ["yarn", "dev"]
+
+  # FRONT
+  front:
+    image: nginx:alpine
+    container_name: estacionamento-dev-front
+    volumes:
+          - ./front:/usr/share/nginx/html:ro
+    ports:
+      - "8888:80"
+
+
