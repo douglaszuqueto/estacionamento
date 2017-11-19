@@ -1,11 +1,11 @@
 import express from 'express'
-import middlewares from './middlewares'
+import defaultMiddlewares from './middlewares/index'
 import routes from './routes'
 
 const app = express()
 
-/* MIDDLEWARES  */
-middlewares(app)
+/* Default middlewares */
+defaultMiddlewares(app)
 
 /* ROUTES */
 routes(app)
