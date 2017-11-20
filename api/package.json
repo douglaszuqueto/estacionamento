@@ -24,6 +24,7 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
     "rethinkdb": "^2.3.3"
   },
   "devDependencies": {
