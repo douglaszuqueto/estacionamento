@@ -1,15 +1,18 @@
 import jwt from 'jsonwebtoken'
+import { Users as User } from 'sdk'
 
 const JWT_SECRET = 'dz'
 
 class Controller {
-  async auth ({username, password}) {
+  async auth ({email, password}) {
     try {
-      const token = await jwt.sign({
-        data: {username, password}
+      const user = await User.findByEmail(email)
+      if (user.password !== password) {
+        throw new Error('The password is invalid')
+      }
+      return await jwt.sign({
+        data: {email, password}
       }, JWT_SECRET, {expiresIn: '1h'})
-
-      return token
     } catch (exception) {
       return exception.message
     }
