@@ -16,6 +16,6 @@ export default (req, res, next) => {
     validateToken(req.headers)
     return next()
   } catch (exception) {
-    return res.json(exception.message)
+    return res.json({error: true, message: exception.message})
   }
 }
