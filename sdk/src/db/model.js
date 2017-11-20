@@ -4,6 +4,8 @@ import getConn from './db'
 export class Model {
   constructor (table) {
     this.table = table
+    this.conn = getConn()
+    this.r = r
   }
 
   find (id) {
