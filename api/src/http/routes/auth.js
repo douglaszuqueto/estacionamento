@@ -1,19 +1,9 @@
 import { Router } from 'express'
-import jwt from 'jsonwebtoken'
+import { AuthController } from '../controllers'
 
 const router = Router()
-const JWT_SECRET = 'dz'
 
-router.post('/', async (req, res) => {
-  try {
-    const {username, password} = req.body
-    const token = jwt.sign({
-      data: {username, password}
-    }, JWT_SECRET, {expiresIn: '1h'})
-    return res.json(token)
-  } catch (exception) {
-    return res.json(exception.message)
-  }
-})
+router
+  .post('/', async (req, res) => res.json(await AuthController.auth(req.body)))
 
 export default router
