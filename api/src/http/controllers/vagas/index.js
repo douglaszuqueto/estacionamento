@@ -1,25 +1,25 @@
-/* MODEL */
 import { Vagas as Model } from 'sdk'
 
 class Controller {
-  async all () {
+  async all (req, res) {
     try {
-      return await Model.all()
+      res.json(await Model.all())
+    } catch (exception) {
+      res.json(exception.message)
+    }
+  }
+
+  async find (req, res) {
+    try {
+      res.json(await Model.find(req.params.id))
     } catch (exception) {
       return exception.message
     }
   }
 
-  async find ({id}) {
+  async create (req, res) {
     try {
-      return await Model.find(id)
-    } catch (exception) {
-      return exception.message
-    }
-  }
-
-  async create (body) {
-    try {
+      const body = req.body
       const payload = {
         number: body.number,
         state: false,
@@ -28,14 +28,15 @@ class Controller {
           y: body.position_y
         }
       }
-      return await Model.create(payload)
+      res.json(await Model.create(payload))
     } catch (exception) {
       return exception.message
     }
   }
 
-  async update ({id}, body) {
+  async update (req, res) {
     try {
+      const body = req.body
       const payload = {
         number: body.number,
         state: false,
@@ -44,23 +45,23 @@ class Controller {
           y: body.position_y
         }
       }
-      return await Model.update(id, payload)
+      res.json(await Model.update(req.params.id, payload))
     } catch (exception) {
       return exception.message
     }
   }
 
-  async remove ({id}) {
+  async remove (req, res) {
     try {
-      return await Model.remove(id)
+      res.json(await Model.remove(req.params.id))
     } catch (exception) {
       return exception.message
     }
   }
 
-  async changeState ({id}) {
+  async changeState (req, res) {
     try {
-      return await Model.changeState(id)
+      res.json(await Model.changeState(req.params.id))
     } catch (exception) {
       return exception.message
     }

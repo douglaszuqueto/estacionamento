@@ -4,6 +4,6 @@ import { AuthController } from '../controllers'
 const router = Router()
 
 router
-  .post('/', async (req, res) => res.json(await AuthController.auth(req.body)))
+  .post('/', async (...args) => AuthController.auth(...args))
 
 export default router
