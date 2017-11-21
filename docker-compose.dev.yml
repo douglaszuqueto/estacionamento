@@ -33,6 +33,7 @@ services:
     environment:
       - APP_PORT=3000
       - DB_HOST=db
+      - JWT_SECRET=dz
     volumes:
       - ./:/www
     ports:
