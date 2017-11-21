@@ -1,15 +1,13 @@
 import { Router } from 'express'
-
-/* Controllers */
-import { UserController } from '../controllers'
+import { UserController as Controller } from '../controllers'
 
 const router = Router()
 
 router
-  .get('/', async (req, res) => res.json(await UserController.all()))
-  .get('/:id', async (req, res) => res.json(await UserController.find(req.params)))
-  .post('/', async (req, res) => res.json(await UserController.create(req.body)))
-  .put('/:id', async (req, res) => res.json(await UserController.update(req.params, req.body)))
-  .delete('/:id', async (req, res) => res.json(await UserController.remove(req.params)))
+  .get('/', async (...args) => Controller.all(...args))
+  .get('/:id', async (...args) => Controller.find(...args))
+  .post('/', async (...args) => Controller.create(...args))
+  .put('/:id', async (...args) => Controller.update(...args))
+  .delete('/:id', async (...args) => Controller.remove(...args))
 
 export default router

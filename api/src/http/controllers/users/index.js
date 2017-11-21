@@ -1,25 +1,25 @@
-/* MODEL */
 import { Users as Model } from 'sdk'
 
 class Controller {
-  async all () {
+  async all (req, res) {
     try {
-      return await Model.all()
+      res.json(await Model.all())
     } catch (exception) {
-      return exception.message
+      res.json(exception.message)
     }
   }
 
-  async find ({id}) {
+  async find (req, res) {
     try {
-      return await Model.find(id)
+      res.json(await Model.find(req.params.id))
     } catch (exception) {
-      return exception.message
+      res.json(exception.message)
     }
   }
 
-  async create (body) {
+  async create (req, res) {
     try {
+      const body = req.body
       const payload = {
         name: body.name,
         email: body.email,
@@ -27,14 +27,15 @@ class Controller {
         password: body.password,
         status: 1
       }
-      return await Model.create(payload)
+      res.json(await Model.create(payload))
     } catch (exception) {
-      return exception.message
+      res.json(exception.message)
     }
   }
 
-  async update ({id}, body) {
+  async update (req, res) {
     try {
+      const body = req.body
       const payload = {
         name: body.name,
         email: body.email,
@@ -42,17 +43,17 @@ class Controller {
         password: body.password,
         status: 1
       }
-      return await Model.update(id, payload)
+      res.json(await Model.update(req.params.id, payload))
     } catch (exception) {
-      return exception.message
+      res.json(exception.message)
     }
   }
 
-  async remove ({id}) {
+  async remove (req, res) {
     try {
-      return await Model.remove(id)
+      res.json(await Model.remove(req.params.id))
     } catch (exception) {
-      return exception.message
+      res.json(exception.message)
     }
   }
 }
