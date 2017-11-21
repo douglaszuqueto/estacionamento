@@ -1,4 +1,5 @@
 import { Users as Model } from 'sdk'
+import { UserService as Service } from '../../../services'
 
 class Controller {
   async all (req, res) {
@@ -19,15 +20,7 @@ class Controller {
 
   async create (req, res) {
     try {
-      const body = req.body
-      const payload = {
-        name: body.name,
-        email: body.email,
-        username: body.username,
-        password: body.password,
-        status: 1
-      }
-      res.json(await Model.create(payload))
+      res.json(await Service.create(req.body))
     } catch (exception) {
       res.json(exception.message)
     }
@@ -35,15 +28,7 @@ class Controller {
 
   async update (req, res) {
     try {
-      const body = req.body
-      const payload = {
-        name: body.name,
-        email: body.email,
-        username: body.username,
-        password: body.password,
-        status: 1
-      }
-      res.json(await Model.update(req.params.id, payload))
+      res.json(await Service.update(req.params.id, req.body))
     } catch (exception) {
       res.json(exception.message)
     }
