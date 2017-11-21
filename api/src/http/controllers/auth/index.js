@@ -1,7 +1,5 @@
-import jwt from 'jsonwebtoken'
+import jwt from '../../../lib/jwt'
 import { Users as User } from 'sdk'
-
-const JWT_SECRET = 'dz'
 
 class Controller {
   async auth ({email, password}) {
@@ -10,9 +8,7 @@ class Controller {
       if (user.password !== password) {
         throw new Error('The password is invalid')
       }
-      return await jwt.sign({
-        data: {email, password}
-      }, JWT_SECRET, {expiresIn: '1h'})
+      return await jwt.sign(email, password)
     } catch (exception) {
       return exception.message
     }
