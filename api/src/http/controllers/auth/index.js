@@ -1,15 +1,9 @@
-import jwt from '../../../lib/jwt'
-import { Users as User } from 'sdk'
+import { AuthService as Service } from '../../../services'
 
 class Controller {
   async auth (req, res) {
     try {
-      const {email, password} = req.body
-      const user = await User.findByEmail(email)
-      if (user.password !== password) {
-        throw new Error('The password is invalid')
-      }
-      res.json(await jwt.sign(email, password))
+      res.json(await Service.auth(req.body))
     } catch (exception) {
       res.json(exception.message)
     }
