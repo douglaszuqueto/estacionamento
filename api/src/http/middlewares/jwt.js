@@ -1,4 +1,4 @@
-import jwt from '../../lib/jwt'
+import jwt from 'lib/jwt'
 
 export default (req, res, next) => {
   try {

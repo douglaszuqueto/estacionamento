@@ -1,5 +1,5 @@
 import { Users as User } from 'sdk'
-import jwt from '../lib/jwt'
+import jwt from 'lib/jwt'
 
 class Service {
   async auth ({email, password}) {
