@@ -13,7 +13,7 @@
   "scripts": {
     "start": "backpack build && node ./build/main.js",
     "lint": "eslint ./src/** --color",
-    "dev": "backpack",
+    "dev": "yarn && backpack",
     "build": "backpack build"
   },
   "license": "MIT",
@@ -24,6 +24,7 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "joi": "^13.0.2",
     "jsonwebtoken": "^8.1.0",
     "rethinkdb": "^2.3.3"
   },
