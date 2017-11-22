@@ -1,4 +1,5 @@
 import { Vagas as Model } from 'sdk'
+import { VagaService as Service } from '../../../services'
 
 class Controller {
   async all (req, res) {
@@ -61,7 +62,7 @@ class Controller {
 
   async changeState (req, res) {
     try {
-      res.json(await Model.changeState(req.params.id))
+      res.json(await Service.changeState(req.params))
     } catch (exception) {
       return exception.message
     }
