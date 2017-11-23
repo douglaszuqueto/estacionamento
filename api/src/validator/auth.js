@@ -5,4 +5,6 @@ const schema = _.object({
   password: _.string().required()
 })
 
-export default (input) => validate(input, schema)
+export function passesOrFail (input) {
+  return validate(input, schema)
+}
