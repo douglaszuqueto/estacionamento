@@ -5,7 +5,7 @@ Projeto de estudo com finalidade de validar tecnologias que proporcionam conexã
 * Banco de Dados -> Back-end
 * Back-end -> Front-end
 
-![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento-realtime/master/estacionamento.PNG)
+![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento-realtime/master/.github/estacionamento.PNG)
 
 ### Tecnologias utilizadas
 
