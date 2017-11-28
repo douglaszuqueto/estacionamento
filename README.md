@@ -5,7 +5,7 @@ Projeto de estudo com finalidade de validar tecnologias que proporcionam conexã
 * Banco de Dados -> Back-end
 * Back-end -> Front-end
 
-![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.PNG)
+![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
 ### Tecnologias utilizadas
 
