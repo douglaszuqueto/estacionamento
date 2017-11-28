@@ -2,16 +2,15 @@
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
-<details>
-## <summary>Sumário</summary>
-  * [Introdução](#introdução)
-  * [Ecossistema](#ecossistema)
-  * [Diagramas](#diagramas)
-    * [Hardware](#hardware)
-    * [Software](#software)
-  * [Tecnologias utilizadas](#tecnologias-utilizadas)
-  * [Referências](#referências)
-</details>
+## Sumário
+
+* [Introdução](#introdução)
+* [Ecossistema](#ecossistema)
+* [Diagramas](#diagramas)
+  * [Hardware](#hardware)
+  * [Software](#software)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Referências](#referências)
 
 ## Introdução
 
