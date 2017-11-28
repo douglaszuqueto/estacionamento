@@ -9,7 +9,7 @@
 * [Diagramas](#diagramas)
   * [Hardware](#hardware)
   * [Software](#software)
-* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Tecnologias utilizadas](#tecnologias-utilizadasframeworks-e-bibliotecas)
 * [Referências](#referências)
 
 ## Introdução
