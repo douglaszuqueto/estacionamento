@@ -35,8 +35,14 @@ Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP
 ### Hardware
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama-hardware.png)
 
+... explicação
+
+
 ### Software
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama-software.png)
+
+... explicação
+
 
 ## Tecnologias utilizadas
 
