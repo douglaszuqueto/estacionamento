@@ -1,9 +1,4 @@
-## Estacionamento Realtime - Arquitetura Modular
-
-Projeto de estudo com finalidade de validar tecnologias que proporcionam conexão de tempo real de ponta a ponta.
-
-* Banco de Dados -> Back-end
-* Back-end -> Front-end
+# Estacionamento Realtime
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
