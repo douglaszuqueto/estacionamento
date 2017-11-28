@@ -29,7 +29,15 @@ Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP
     * Aplicação para administração geral
 * Infraestrutura
   * Docker
-  
+
+## Diagramas
+
+### Hardware
+![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama-hardware.png)
+
+### Software
+![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama-software.png)
+
 ## Tecnologias utilizadas
 
 * Front-end
@@ -44,3 +52,4 @@ Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP
 * Banco de Dados
   * RethinkDB
 
+## Referências
