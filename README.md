@@ -56,12 +56,12 @@ Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP
 ... explicação
 
 
-## Tecnologias utilizadas
+## Tecnologias utilizadas(frameworks e bibliotecas)
 
 * Front-end
-  * HTML
-  * CSS
-  * JS
+  * VueJS
+  * Bootstrap
+  * Axios
 * Back-end
   * JS(NodeJS)
   * Express
