@@ -2,8 +2,9 @@
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
-## Sumário
-
+```md
+<details>
+<summary>## Sumário</summary>
 * [Introdução](#introdução)
 * [Ecossistema](#ecossistema)
 * [Diagramas](#diagramas)
@@ -11,6 +12,8 @@
   * [Software](#software)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Referências](#referências)
+</details>
+```
 
 ## Introdução
 
