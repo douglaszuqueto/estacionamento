@@ -2,6 +2,18 @@
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
+## Sumário
+
+* [Introdução](#introdução)
+* [Ecossistema](#ecossistema)
+* [Diagramas](#diagramas)
+  * [Hardware](#hardware)
+  * [Software](#software)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Referências](#referências)
+
+## Introdução
+
 Este projeto foi originado a partir [deste repositório](https://github.com/douglaszuqueto/estacionamento-realtime) onde foi desenvolvido uma pequena
 solução para validar tecnologias de tempo real, tais como Socket.IO no back-end juntamente com a funcionalidade *changes* do RethinkDB.
 
