@@ -7,7 +7,30 @@ solução para validar tecnologias de tempo real, tais como Socket.IO no back-en
 
 O projeto em si, já possui uma arquitetura bem diferente e mais desacoplada do projeto anterior, visando ser de fácil mantimento e escalável.
 
-### Tecnologias utilizadas
+## Ecossistema
+
+O ecossistema do projeto, basicamente subdivide-se em: Hardware, Software e Infraestrutura.
+
+Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP, WebSocket e MQTT.
+
+* Hardware
+  * Vagas
+  * Cancelas
+  * Displays
+* Software
+  * Back-end
+    * API
+    * Socket.IO
+    * Subscribers
+    * RethinkDB
+  * Front-end
+    * Aplicação para usuário final
+    * Aplicação para administração do estacionamento
+    * Aplicação para administração geral
+* Infraestrutura
+  * Docker
+  
+## Tecnologias utilizadas
 
 * Front-end
   * HTML
