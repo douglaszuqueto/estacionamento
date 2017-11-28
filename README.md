@@ -2,7 +2,6 @@
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
-```md
 <details>
 <summary>## Sumário</summary>
 * [Introdução](#introdução)
@@ -13,7 +12,6 @@
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Referências](#referências)
 </details>
-```
 
 ## Introdução
 
