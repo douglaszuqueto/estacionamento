@@ -1,4 +1,4 @@
-# Estacionamento Realtime
+# Smart  Parking
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/estacionamento/master/.github/diagrama.png)
 
@@ -59,15 +59,15 @@ Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP
 ## Tecnologias utilizadas(frameworks e bibliotecas)
 
 * Front-end
-  * VueJS
-  * Bootstrap
-  * Axios
+  * [VueJS](https://vuejs.org/)
+  * [Bootstrap](http://getbootstrap.com/)
+  * [Axios](https://github.com/axios/axios)
 * Back-end
-  * JS(NodeJS)
-  * Express
-  * Socket.IO
+  * [NodeJS](https://nodejs.org/)
+  * [Express](http://expressjs.com)
+  * [Socket.IO](https://socket.io/)
 
 * Banco de Dados
-  * RethinkDB
+  * [RethinkDB](https://www.rethinkdb.com/)
 
 ## Referências
