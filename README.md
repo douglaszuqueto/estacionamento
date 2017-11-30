@@ -42,6 +42,10 @@ Todo o ecossistema irá se conversar através de integrações(protocolos): HTTP
 * Infraestrutura
   * Docker
 
+## Maquete
+
+...em breve
+
 ## Diagramas
 
 ### Hardware
