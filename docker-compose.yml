@@ -22,7 +22,7 @@ services:
     image: ambientum/node
     container_name: estacionamento-sdk
     volumes:
-      - ./sdk:/www
+      - ./back-end/sdk:/www
     working_dir: /www
     command: ["yarn", "build"]
 
@@ -35,7 +35,7 @@ services:
       - DB_HOST=db
       - JWT_SECRET=dz
     volumes:
-      - ./:/www
+      - ./back-end:/www
     ports:
       - "3000:3000"
     links:
@@ -54,7 +54,7 @@ services:
       - DB_HOST=db
       - IO_PORT=8000
     volumes:
-      - ./:/www
+      - ./back-end:/www
     ports:
       - "8000:8000"
     links:
@@ -74,7 +74,7 @@ services:
       - IO_HOST=io
       - IO_PORT=8000
     volumes:
-      - ./:/www
+      - ./back-end:/www
     links:
       - io
       - db
@@ -89,7 +89,7 @@ services:
     image: nginx:alpine
     container_name: estacionamento-front
     volumes:
-          - ./front:/usr/share/nginx/html:ro
+          - ./front-end/client:/usr/share/nginx/html:ro
     ports:
       - "8888:80"
 
