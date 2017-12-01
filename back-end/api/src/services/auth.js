@@ -1,4 +1,4 @@
-import { Users as User } from 'sdk'
+import { Users as User } from 'back-end/sdk'
 import jwt from 'lib/jwt'
 
 class Service {

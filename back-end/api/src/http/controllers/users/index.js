@@ -1,4 +1,4 @@
-import { Users as Model } from 'sdk'
+import { Users as Model } from 'back-end/sdk'
 import { UserService as Service } from '../../../services'
 
 class Controller {

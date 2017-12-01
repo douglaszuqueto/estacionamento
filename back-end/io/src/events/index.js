@@ -1,4 +1,4 @@
-import { Vagas as vagas } from 'sdk'
+import { Vagas as vagas } from 'back-end/sdk/src/index'
 
 export default (io) => {
   io.on('connection', (socket) => {
