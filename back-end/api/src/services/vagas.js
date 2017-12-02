@@ -1,4 +1,4 @@
-import { Vagas as Model } from 'back-end/sdk'
+import { Vagas as Model } from 'sdk'
 
 class Service {
   async create (body) {
