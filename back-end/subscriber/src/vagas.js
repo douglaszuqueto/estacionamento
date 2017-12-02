@@ -1,4 +1,4 @@
-import { Vagas } from 'back-end/sdk/src/index'
+import { Vagas } from 'sdk'
 
 export default async (io) => {
   try {
