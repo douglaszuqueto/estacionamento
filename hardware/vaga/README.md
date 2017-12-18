@@ -1,0 +1,7 @@
+# Hardware - Vaga
+
+## Diagrama
+
+## Esquemático
+
+
